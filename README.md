@@ -2,7 +2,7 @@
 
 A modern and interactive portfolio website built with **Next.js**, featuring **3D elements**, smooth animations, and real-time GitHub statistics.  
 
-![Portfolio Preview](https://via.placeholder.com/1000x500?text=Portfolio+Preview) 
+![Portfolio Preview](public/portfolio.png) 
 
 ## **✨ Tech Stack**  
 
