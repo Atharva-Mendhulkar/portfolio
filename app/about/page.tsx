@@ -17,9 +17,8 @@ export default function AboutPage() {
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm border shadow-sm">
                   About Me
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Atharva</h1>
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tight">👋 Hi, I'm Atharva!</h1>
                 <div className="space-y-4 text-muted-foreground">
-                  <p className="text-lg">👋 Hi, I'm Atharva!</p>
                   <p>🚀 Aspiring Software Engineer | Competitive Programmer | Tech Enthusiast</p>
                   <p>
                     I'm a 1st-year IT Undergrad at VIT Vellore with a passion for DSA, Web Development, and AI/ML. I
