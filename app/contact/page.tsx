@@ -96,7 +96,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">Phone</h3>
-                    <p className="text-gray-400">+91 98765 43210</p>
+                    <p className="text-gray-400">+91 8591436357</p>
                   </div>
                 </div>
               </div>
@@ -122,7 +122,7 @@ export default function ContactPage() {
                   className="bg-green-900/20 border border-green-800 rounded-lg p-4 text-center"
                 >
                   <h3 className="font-medium text-green-400 mb-1">Message Sent!</h3>
-                  <p className="text-gray-300">Thank you for reaching out. I'll get back to you soon.</p>
+                  <p className="text-gray-300">Thank you for reaching out! I haven't implemented this feature yet, but I can do it for you 😊</p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">

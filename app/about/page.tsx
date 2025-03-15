@@ -17,9 +17,8 @@ export default function AboutPage() {
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm border shadow-sm">
                   About Me
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Atharva</h1>
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tight">👋 Hi, I'm Atharva!</h1>
                 <div className="space-y-4 text-muted-foreground">
-                  <p className="text-lg">👋 Hi, I'm Atharva!</p>
                   <p>🚀 Aspiring Software Engineer | Competitive Programmer | Tech Enthusiast</p>
                   <p>
                     I'm a 1st-year IT Undergrad at VIT Vellore with a passion for DSA, Web Development, and AI/ML. I
@@ -79,7 +78,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-gradient-to-b from-background to-muted">
+      <section className="py-16 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-background dark:to-muted">
         <div className="container mx-auto max-w-5xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <GitHubStats />
@@ -94,10 +93,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-muted/50">
+      <section className="py-16 px-4 bg-gray-50 dark:bg-muted/50">
         <div className="container mx-auto max-w-5xl text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Let's Connect</h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
           <SocialLinks />

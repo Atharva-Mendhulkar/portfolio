@@ -66,13 +66,13 @@ export default function LeetCodeStats() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="bg-gray-900/50 backdrop-blur-sm rounded-lg p-6 border border-gray-800"
+        className="bg-white dark:bg-gray-900/50 backdrop-blur-sm rounded-lg p-6 border shadow-md"
       >
         <div className="animate-pulse">
-          <div className="h-8 w-48 bg-gray-800 rounded mb-4" />
+          <div className="h-8 w-48 bg-gray-100 dark:bg-gray-800 rounded mb-4" />
           <div className="grid grid-cols-3 gap-4">
             {[...Array(3)].map((_, i) => (
-              <div key={i} className="bg-gray-800/50 rounded-lg p-4 h-24" />
+              <div key={i} className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 h-24" />
             ))}
           </div>
         </div>
@@ -86,40 +86,40 @@ export default function LeetCodeStats() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="bg-gray-900/50 backdrop-blur-sm rounded-lg p-6 border border-gray-800"
+      className="bg-white dark:bg-gray-900/50 backdrop-blur-sm rounded-lg p-6 border shadow-md"
     >
       <h3 className="text-xl font-bold mb-4">LeetCode Progress</h3>
 
       <div className="grid grid-cols-3 gap-4 mb-6">
-        <div className="bg-gray-800/50 rounded-lg p-4 text-center">
-          <p className="text-xs text-gray-400">Easy</p>
-          <p className="text-2xl font-bold text-green-500">{stats.easy}</p>
+        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 text-center">
+          <p className="text-xs text-muted-foreground">Easy</p>
+          <p className="text-2xl font-bold text-green-600 dark:text-green-500">{stats.easy}</p>
         </div>
 
-        <div className="bg-gray-800/50 rounded-lg p-4 text-center">
-          <p className="text-xs text-gray-400">Medium</p>
-          <p className="text-2xl font-bold text-yellow-500">{stats.medium}</p>
+        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 text-center">
+          <p className="text-xs text-muted-foreground">Medium</p>
+          <p className="text-2xl font-bold text-yellow-600 dark:text-yellow-500">{stats.medium}</p>
         </div>
 
-        <div className="bg-gray-800/50 rounded-lg p-4 text-center">
-          <p className="text-xs text-gray-400">Hard</p>
-          <p className="text-2xl font-bold text-red-500">{stats.hard}</p>
+        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 text-center">
+          <p className="text-xs text-muted-foreground">Hard</p>
+          <p className="text-2xl font-bold text-red-600 dark:text-red-500">{stats.hard}</p>
         </div>
       </div>
 
       <div className="space-y-4">
-        <div className="bg-gray-800/50 rounded-lg p-4">
-          <p className="text-sm text-gray-400">Total Problems Solved</p>
+        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4">
+          <p className="text-sm text-muted-foreground">Total Problems Solved</p>
           <p className="text-2xl font-bold">{stats.totalSolved}</p>
         </div>
 
-        <div className="bg-gray-800/50 rounded-lg p-4">
-          <p className="text-sm text-gray-400">Acceptance Rate</p>
+        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4">
+          <p className="text-sm text-muted-foreground">Acceptance Rate</p>
           <p className="text-2xl font-bold">{stats.acceptanceRate.toFixed(1)}%</p>
         </div>
 
-        <div className="bg-gray-800/50 rounded-lg p-4">
-          <p className="text-sm text-gray-400">Global Ranking</p>
+        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4">
+          <p className="text-sm text-muted-foreground">Global Ranking</p>
           <p className="text-2xl font-bold">#{stats.ranking.toLocaleString()}</p>
         </div>
       </div>

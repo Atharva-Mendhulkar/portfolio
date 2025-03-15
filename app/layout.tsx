@@ -9,9 +9,8 @@ import type { Metadata } from "next"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Atharva | Software Engineer & Competitive Programmer",
-  description: "Portfolio of Atharva - Aspiring Software Engineer & Competitive Programmer",
-    generator: 'v0.dev'
+  title: "Atharva | Aspiring SWE & Competitive Programmer",
+  description: "Portfolio of Atharva - Aspiring SWE & Competitive Programmer",
 }
 
 export default function RootLayout({
@@ -33,7 +32,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-
-import './globals.css'

@@ -121,13 +121,13 @@ export default function GitHubStats() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="bg-gray-900/50 backdrop-blur-sm rounded-lg p-6 border border-gray-800"
+        className="bg-white dark:bg-gray-900/50 backdrop-blur-sm rounded-lg p-6 border shadow-md"
       >
         <div className="animate-pulse">
-          <div className="h-8 w-48 bg-gray-800 rounded mb-4" />
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+          <div className="h-8 w-48 bg-gray-100 dark:bg-gray-800 rounded mb-4" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[...Array(4)].map((_, i) => (
-              <div key={i} className="bg-gray-800/50 rounded-lg p-4 h-24" />
+              <div key={i} className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 h-24" />
             ))}
           </div>
         </div>
@@ -141,33 +141,33 @@ export default function GitHubStats() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="bg-gray-900/50 backdrop-blur-sm rounded-lg p-6 border border-gray-800"
+      className="bg-white dark:bg-gray-900/50 backdrop-blur-sm rounded-lg p-6 border shadow-md"
     >
       <h3 className="text-xl font-bold mb-4">GitHub Activity</h3>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <div className="bg-gray-800/50 rounded-lg p-4 text-center">
-          <Calendar className="w-5 h-5 mx-auto mb-2 text-green-500" />
+        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 text-center">
+          <Calendar className="w-5 h-5 mx-auto mb-2 text-green-600 dark:text-green-500" />
           <p className="text-2xl font-bold">{stats.contributions}</p>
-          <p className="text-xs text-gray-400">Contributions</p>
+          <p className="text-xs text-muted-foreground">Contributions</p>
         </div>
 
-        <div className="bg-gray-800/50 rounded-lg p-4 text-center">
-          <Code className="w-5 h-5 mx-auto mb-2 text-blue-500" />
+        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 text-center">
+          <Code className="w-5 h-5 mx-auto mb-2 text-blue-600 dark:text-blue-500" />
           <p className="text-2xl font-bold">{stats.repositories}</p>
-          <p className="text-xs text-gray-400">Repositories</p>
+          <p className="text-xs text-muted-foreground">Repositories</p>
         </div>
 
-        <div className="bg-gray-800/50 rounded-lg p-4 text-center">
-          <Star className="w-5 h-5 mx-auto mb-2 text-yellow-500" />
+        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 text-center">
+          <Star className="w-5 h-5 mx-auto mb-2 text-yellow-600 dark:text-yellow-500" />
           <p className="text-2xl font-bold">{stats.stars}</p>
-          <p className="text-xs text-gray-400">Stars</p>
+          <p className="text-xs text-muted-foreground">Stars</p>
         </div>
 
-        <div className="bg-gray-800/50 rounded-lg p-4 text-center">
-          <GitFork className="w-5 h-5 mx-auto mb-2 text-purple-500" />
+        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 text-center">
+          <GitFork className="w-5 h-5 mx-auto mb-2 text-purple-600 dark:text-purple-500" />
           <p className="text-2xl font-bold">{stats.forks}</p>
-          <p className="text-xs text-gray-400">Forks</p>
+          <p className="text-xs text-muted-foreground">Forks</p>
         </div>
       </div>
 
@@ -179,7 +179,7 @@ export default function GitHubStats() {
               <span>{language.name}</span>
               <span>{language.percentage}%</span>
             </div>
-            <div className="w-full bg-gray-800 rounded-full h-2">
+            <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-full h-2">
               <motion.div
                 initial={{ width: 0 }}
                 whileInView={{ width: `${language.percentage}%` }}
