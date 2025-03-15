@@ -56,7 +56,7 @@ export default function ContactPage() {
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Get In Touch</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              The message doesn’t reach me as I haven’t implemented it yet, but I can do it for you using Next.js API routes and a backend like FastAPI or Firebase 😊
+            Have a question or want to work together? Feel free to reach out!
             </p>
           </div>
 
@@ -122,7 +122,7 @@ export default function ContactPage() {
                   className="bg-green-900/20 border border-green-800 rounded-lg p-4 text-center"
                 >
                   <h3 className="font-medium text-green-400 mb-1">Message Sent!</h3>
-                  <p className="text-gray-300">Thank you for reaching out! I haven't implemented this feature yet, but I can do it for you 😊</p>
+                  <p className="text-gray-300">Thank you for reaching out! I haven't implemented this feature yet,but I can do it for you using Next.js API routes and a backend like FastAPI or Firebase 😊</p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
