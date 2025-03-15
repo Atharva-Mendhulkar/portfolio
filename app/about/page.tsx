@@ -23,7 +23,7 @@ export default function AboutPage() {
                   <p>
                     I'm a 1st-year IT Undergrad at VIT Vellore with a passion for DSA, Web Development, and AI/ML. I
                     enjoy competitive programming on platforms like Codeforces, CodeChef & LeetCode, and I'm constantly
-                    exploring Full Stack Development & AI applications.
+                    exploring Full Stack Development & AI and ML applications.
                   </p>
                 </div>
               </div>

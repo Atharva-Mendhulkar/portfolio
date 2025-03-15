@@ -56,7 +56,7 @@ export default function ContactPage() {
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Get In Touch</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Have a question or want to work together? Feel free to reach out!
+              The message doesn’t reach me as I haven’t implemented it yet, but I can do it for you using Next.js API routes and a backend like FastAPI or Firebase 😊
             </p>
           </div>
 

@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { Github, Linkedin, Code2, BookOpen, Mail } from "lucide-react"
 
 const socialLinks = [
-  { name: "GitHub", icon: Github, url: "https://github.com/mendhu36", color: "#333" },
+  { name: "GitHub", icon: Github, url: "https://github.com/Atharva-Mendhulkar", color: "#333" },
   { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/in/mendhu36", color: "#0077B5" },
   { name: "CodeForces", icon: Code2, url: "https://codeforces.com/profile/Atharva-mendhu", color: "#1F8ACB" },
   { name: "LeetCode", icon: BookOpen, url: "https://leetcode.com/mendhu36", color: "#FFA116" },
