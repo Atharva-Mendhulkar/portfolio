@@ -12,7 +12,7 @@ const projects = [
     description: "A high-fidelity clone of Apple's website",
     tags: ["Next.js", "TypeScript", "Framer Motion"],
     github: "https://github.com/Atharva-Mendhulkar/apple-clone",
-    demo: "https://apple-clone.vercel.app",
+    demo: "https://apple-clone-peach-psi.vercel.app/",
   },
   {
     id: 2,
