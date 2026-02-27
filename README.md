@@ -1,10 +1,10 @@
-# **🚀 Personal Portfolio Website**  
+# **Personal Portfolio Website**  
 
 A modern and interactive portfolio website built with **Next.js**, featuring **3D elements**, smooth animations, and real-time GitHub statistics.  
 
 ![Portfolio Preview](public/portfolio.png) 
 
-## **✨ Tech Stack**  
+## **Tech Stack**  
 
 | Technology    | Purpose |
 |--------------|---------|
@@ -17,7 +17,7 @@ A modern and interactive portfolio website built with **Next.js**, featuring **3
 
 ---
 
-## **🌟 Features**  
+## **Features**  
 
 ✔️ **Responsive design** (Mobile & Desktop)  
 ✔️ **Dark/Light theme support**  
@@ -31,7 +31,7 @@ A modern and interactive portfolio website built with **Next.js**, featuring **3
 
 ---
 
-## **🛠️ Local Development**  
+## **Local Development**  
 
 Clone the repository:  
 
@@ -56,7 +56,7 @@ pnpm dev
 
 ---
 
-## **📁 Project Structure**  
+## **Project Structure**  
 
 ```
 .
@@ -70,7 +70,7 @@ pnpm dev
 
 ---
 
-## **🔑 Environment Variables**  
+## **Environment Variables**  
 
 Create a `.env.local` file in the root directory and add your GitHub token for fetching stats:  
 
@@ -80,26 +80,21 @@ GITHUB_TOKEN=your_github_token
 
 ---
 
-## **🚀 Deployment**  
+## **Deployment**  
 
 Deploy your portfolio in seconds using [Vercel](https://vercel.com):  
 
-1️⃣ Push your code to GitHub.  
-2️⃣ Connect your repo to Vercel.  
-3️⃣ Deploy with one click!  
+1. Push your code to GitHub.  
+2. Connect your repo to Vercel.  
+3. Deploy with one click!  
 
 🔗 **Live Demo:** [portfolio](https://atharva-works.vercel.app/about)
 
 ---
 
-## **📜 License**  
+## **License**  
 
 This project is licensed under the **MIT License** – feel free to use and modify it!  
 
----
 
-## **👨‍💻 Author**  
 
-Made with ❤️ by **[Atharva](https://github.com/Atharva-Mendhulkar)**  
-
----

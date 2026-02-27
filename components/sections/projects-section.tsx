@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -34,7 +34,7 @@ const projects = [
     title: "AaiCARE",
     description: "An AI-powered maternal health app with risk assessment, pregnancy tracking, and educational resources.",
     image: "/placeholder.svg?height=300&width=500",
-    tags: ["Next.js", "React", "FastAPI", "Python", "Tailwind CSS", "AI","all"],
+    tags: ["Next.js", "React", "FastAPI", "Python", "Tailwind CSS", "AI", "all"],
     github: "https://github.com/Atharva-Mendhulkar/aaicare",
     demo: "https://aaicare.vercel.app",
     featured: true,
@@ -44,7 +44,7 @@ const projects = [
 // Filter types
 type FilterType = "all" | "featured" | "web" | "mobile" | "ai"
 
-export default function ProjectsPage() {
+export default function ProjectsSection() {
   const [filter, setFilter] = useState<FilterType>("all")
 
   const filteredProjects = projects.filter((project) => {
@@ -58,7 +58,7 @@ export default function ProjectsPage() {
   })
 
   return (
-    <div className="min-h-screen pt-20">
+    <div id="projects" className="pt-20">
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">

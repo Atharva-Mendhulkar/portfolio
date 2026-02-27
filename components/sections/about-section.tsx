@@ -1,14 +1,13 @@
+import React from "react"
 import GitHubStats from "@/components/github-stats"
 import LeetCodeStats from "@/components/leetcode-stats"
-import TechStack from "@/components/tech-stack"
-import SocialLinks from "@/components/social-links"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, Code, Trophy } from "lucide-react"
 
-export default function AboutPage() {
+export default function AboutSection() {
   return (
-    <div className="min-h-screen pt-20">
+    <div id="about" className="pt-20">
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -87,29 +86,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-5xl">
-          <TechStack />
-        </div>
-      </section>
-
-      <section className="py-16 px-4 bg-gray-50 dark:bg-muted/50">
-        <div className="container mx-auto max-w-5xl text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Let's Connect</h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-          </p>
-          <SocialLinks />
-
-          <div className="mt-8">
-            <Button asChild size="lg">
-              <Link href="/contact">
-                Contact Me <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

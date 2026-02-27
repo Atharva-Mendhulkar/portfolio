@@ -10,10 +10,11 @@ import { cn } from "@/lib/utils"
 import ThemeToggle from "@/components/theme-toggle"
 
 const navItems = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Projects", path: "/projects" },
-  { name: "Contact", path: "/contact" },
+  { name: "Home", path: "#home" },
+  { name: "Projects", path: "#projects" },
+  { name: "Research", path: "#research" },
+  { name: "About", path: "#about" },
+  { name: "Contact", path: "#contact" },
 ]
 
 export default function Navbar() {
@@ -34,7 +35,7 @@ export default function Navbar() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled || pathname !== "/"
+        isScrolled
           ? "bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800"
           : "bg-transparent",
       )}
@@ -48,34 +49,20 @@ export default function Navbar() {
               transition={{ duration: 0.5 }}
               className="font-bold text-xl monochrome-gradient"
             >
-              Atharva
+              portfolio
             </motion.div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.path}
                 href={item.path}
-                className={cn(
-                  "relative py-2 text-sm font-medium transition-colors",
-                  pathname === item.path
-                    ? "text-gray-900 dark:text-white"
-                    : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white",
-                )}
+                className="relative py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
                 {item.name}
-                {pathname === item.path && (
-                  <motion.div
-                    layoutId="navbar-indicator"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-900 dark:bg-white"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                )}
-              </Link>
+              </a>
             ))}
 
             <ThemeToggle />
@@ -105,19 +92,14 @@ export default function Navbar() {
             <div className="container mx-auto px-4 py-4">
               <nav className="flex flex-col space-y-4">
                 {navItems.map((item) => (
-                  <Link
+                  <a
                     key={item.path}
                     href={item.path}
-                    className={cn(
-                      "py-2 text-base font-medium transition-colors",
-                      pathname === item.path
-                        ? "text-gray-900 dark:text-white"
-                        : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white",
-                    )}
+                    className="py-2 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.name}
-                  </Link>
+                  </a>
                 ))}
               </nav>
             </div>

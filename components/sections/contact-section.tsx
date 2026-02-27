@@ -11,7 +11,7 @@ import { Label } from "@/components/ui/label"
 import { Send, Mail, MapPin, Phone } from "lucide-react"
 import SocialLinks from "@/components/social-links"
 
-export default function ContactPage() {
+export default function ContactSection() {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -50,13 +50,13 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen pt-20">
+    <div id="contact" className="pt-20">
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Get In Touch</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a question or want to work together? Feel free to reach out!
+              Have a question or want to work together? Feel free to reach out!
             </p>
           </div>
 
