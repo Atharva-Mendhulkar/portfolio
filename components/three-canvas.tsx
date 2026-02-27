@@ -3,17 +3,16 @@
 import { useRef, useState, useEffect } from "react"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { useGLTF, Environment, OrbitControls, Text } from "@react-three/drei"
-import { type Mesh, Vector3, MathUtils } from "three"
-import { motion } from "framer-motion-3d"
-import { MotionConfig } from "framer-motion"
+import { type Mesh, type Group, Vector3, MathUtils } from "three"
 
 function Model({ onClick }: { onClick: () => void }) {
   const meshRef = useRef<Mesh>(null)
+  const groupRef = useRef<Group>(null)
   const [hovered, setHovered] = useState(false)
   const [clicked, setClicked] = useState(false)
   const { camera } = useThree()
+  const scaleRef = useRef(0)
 
-  // Update the model path to use Porygon
   const { scene } = useGLTF("/porygon.glb")
 
   useEffect(() => {
@@ -23,21 +22,22 @@ function Model({ onClick }: { onClick: () => void }) {
   useFrame((state) => {
     if (!meshRef.current) return
 
-    // Add subtle movement based on mouse position
-    const mouse = new Vector3(state.mouse.x * 0.3, state.mouse.y * 0.3, 0)
+    // Animate scale up on load (replaces framer-motion-3d animation)
+    if (groupRef.current) {
+      scaleRef.current = MathUtils.lerp(scaleRef.current, 1, 0.08)
+      groupRef.current.scale.setScalar(scaleRef.current)
+    }
 
-    // Adjust rotation speed for Porygon
+    const mouse = new Vector3(state.mouse.x * 0.3, state.mouse.y * 0.3, 0)
     const rotationSpeed = hovered ? 0.015 : 0.005
     meshRef.current.rotation.y += rotationSpeed
 
-    // Move up when clicked
     if (clicked) {
       meshRef.current.position.y = MathUtils.lerp(meshRef.current.position.y, 0, 0.1)
     } else {
       meshRef.current.position.y = MathUtils.lerp(meshRef.current.position.y, -1, 0.1)
     }
 
-    // Apply mouse movement
     meshRef.current.position.x = MathUtils.lerp(meshRef.current.position.x, mouse.x, 0.1)
     meshRef.current.position.y = MathUtils.lerp(meshRef.current.position.y, mouse.y + (clicked ? 0 : -1), 0.1)
   })
@@ -48,7 +48,7 @@ function Model({ onClick }: { onClick: () => void }) {
   }
 
   return (
-    <motion.group initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 0.8, type: "spring" }}>
+    <group ref={groupRef}>
       <primitive
         ref={meshRef}
         object={scene.clone()}
@@ -58,7 +58,6 @@ function Model({ onClick }: { onClick: () => void }) {
         onPointerOut={() => setHovered(false)}
         onClick={handleClick}
       />
-
       {hovered && (
         <Text
           position={[0, 1.5, 0]}
@@ -71,44 +70,27 @@ function Model({ onClick }: { onClick: () => void }) {
           Click me!
         </Text>
       )}
-    </motion.group>
+    </group>
   )
 }
 
 export default function ThreeCanvas() {
   const [modelClicked, setModelClicked] = useState(false)
 
-  const handleModelClick = () => {
-    setModelClicked(!modelClicked)
-  }
-
   return (
     <div className="w-full h-full">
-      <MotionConfig
-        transition={{
-          type: "spring",
-          mass: 5,
-          stiffness: 500,
-          damping: 50,
-          restDelta: 0.001,
-        }}
-      >
-        <Canvas camera={{ position: [0, 0, 8], fov: 45 }} style={{ background: "transparent" }} shadows>
-          <ambientLight intensity={0.5} />
-          <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} castShadow />
-
-          <Model onClick={handleModelClick} />
-          <Environment preset="city" />
-
-          <OrbitControls
-            enableZoom={modelClicked}
-            enablePan={modelClicked}
-            minPolarAngle={Math.PI / 3}
-            maxPolarAngle={Math.PI / 1.5}
-          />
-        </Canvas>
-      </MotionConfig>
+      <Canvas camera={{ position: [0, 0, 8], fov: 45 }} style={{ background: "transparent" }} shadows>
+        <ambientLight intensity={0.5} />
+        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} castShadow />
+        <Model onClick={() => setModelClicked(!modelClicked)} />
+        <Environment preset="city" />
+        <OrbitControls
+          enableZoom={modelClicked}
+          enablePan={modelClicked}
+          minPolarAngle={Math.PI / 3}
+          maxPolarAngle={Math.PI / 1.5}
+        />
+      </Canvas>
     </div>
   )
 }
-
